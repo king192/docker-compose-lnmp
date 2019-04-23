@@ -1,7 +1,9 @@
 version: "2"
 services:
   php:
-    image: php:7.2.3-fpm
+    build: 
+        context: .
+        dockerfile: Dockerfile.php
     networks:
       - lnmp
     volumes:

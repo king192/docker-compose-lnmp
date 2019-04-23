@@ -1,2 +1,4 @@
-/etc/nginx/logs/
-/mysql/data/
+mysql/data/
+nginx/logs/
+web/
+
