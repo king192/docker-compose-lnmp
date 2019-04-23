@@ -10,6 +10,12 @@ services:
        -  ./web:/web
     environment: 
       - TZ=Asia/Shanghai
+  httpd:
+    image: httpd:2.4.33
+    networks:
+      - lnmp
+    environment:
+      - TZ=Asia/Shanghai
   nginx:
     image: nginx:latest
     networks:
@@ -24,6 +30,7 @@ services:
       - TZ=Asia/Shanghai
     links:
       - php
+      - httpd
   mysql:
     hostname: mysql
     image: mysql:5.6
